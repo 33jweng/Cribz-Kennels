@@ -5,8 +5,9 @@
     font-family: 'Kumbh Sans', sans-serif;
 }
 
+/* Navbar CSS */
 .navbar {
-    background: #131313;
+    background: #332723;
     height: 80px;
     display: flex;
     justify-content: center;
@@ -29,8 +30,8 @@
 }
 
 #navbar__logo {
-    background-color: #ff8177;
-    background-image: linear-gradient(to top, #ff0844 0%, #ffb199 100%);
+    font-weight: 550;
+    background-image: linear-gradient(to top, #B65B5D 0%, #E5C05F 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -197,3 +198,50 @@
     }
 }
 
+/* Hero Section CSS */
+
+.main {
+    background-color: #000;
+}
+
+.main__container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    margin: 0 auto;
+    height: 90vh;
+    background-color: #000;
+    z-index: 1;
+    width: 100%;
+    max-width: 1300px;
+    padding: 0 50px;
+}
+
+.main__content h1 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to top, #B65B5D 0%, #E5C05F 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content h2 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    background-image: linear-gradient(to top, #2364AA 0%, #662C91 100%);
+    background-size: 100%;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+.main__content p {
+    color: #E8E9F3;
+    margin-top: 1rem;
+    font-size: 2rem;
+    font-weight: 700;
+}
