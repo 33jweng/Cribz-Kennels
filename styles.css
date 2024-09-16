@@ -300,7 +300,6 @@
 
 @media screen and (max-width: 768px) {
     .main__container {
-        text-align: center;
         display: grid;
         grid-template-columns: auto;
         align-items: center;
@@ -324,5 +323,11 @@
 }
 
 @media screen and (max-width: 480px) {
+    
+}
+
+/* Services section CSS */
+
+.services {
     
 }
