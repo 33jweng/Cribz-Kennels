@@ -413,6 +413,64 @@
     transition: 0.3s ease-in;
 }
 
+@media screen and (max-width: 960px) {
+    .services {
+        height: 1600px;
+    }
 
+    .services h1 {
+        font-size: 2rem;
+    }
+}
 
+@media screen and (max-width:480px) {
+    .services {
+        height: 1400px;
+    }
 
+    .services h1 {
+        font-size: 1.2rem;
+    }
+
+    .services__card {
+        width: 360px;
+    }
+}
+
+/* Footer CSS */
+
+.footer__container {
+    background-color: #000;
+    color: #E8E9F3;
+    padding: 5rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#footer__logo {
+    color: #E8E9F3;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 2rem;
+}
+
+.footer__links {
+    width: 100%;
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer__links--wrapper {
+    display: flex;
+}
+
+.footer__links--items {
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}
