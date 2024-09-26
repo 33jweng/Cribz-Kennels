@@ -198,17 +198,14 @@ nav a:hover {
 .main {
     background-color: #000;
     padding-bottom: 7rem;
-} 
-
-.main-container {
     display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-.main-container > * {
+.main > * {
     flex: 0 0 50%;
-}
-
-.main-content {
     padding: 6rem 1rem 2rem;
 }
 
@@ -283,6 +280,7 @@ nav a:hover {
 #main-img {
     height: 100%;
     width: 100%;
+    min-width: 20rem;
 }
 
 /* Mobile Responsiveness */
