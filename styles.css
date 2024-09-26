@@ -15,7 +15,7 @@
     --dark-two: #141414;
     --white: #E8E9F3;
 }
-/* Navbar CSS */
+/* Navigation CSS */
 
 header {
     background: var(--dark);
@@ -132,6 +132,8 @@ nav a:hover {
     top: 50px;
 }
 
+/* Responsiveness for Navigation */
+
 @media screen and (min-width: 860px) {
     .nav-toggle-label {
         display: none;
@@ -195,9 +197,9 @@ nav a:hover {
 } 
 
 /* Hero Section CSS */
+
 .main {
     background-color: #000;
-    padding-bottom: 7rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -206,7 +208,7 @@ nav a:hover {
 
 .main > * {
     flex: 0 0 50%;
-    padding: 6rem 1rem 2rem;
+    padding: 6rem 2rem 2rem;
 }
 
 .main-content h1 {
@@ -274,6 +276,7 @@ nav a:hover {
 }
 
 .main-img--container {
+    padding-top: 2rem;
     text-align: center;
 }
 
@@ -283,33 +286,15 @@ nav a:hover {
     min-width: 20rem;
 }
 
-/* Mobile Responsiveness */
+/* Responsiveness for Hero */
 
-@media screen and (max-width: 768px) {
-    .main-container {
-        display: grid;
-        grid-template-columns: auto;
-        align-items: center;
-        justify-self: center;
-        width: 100%;
-        margin: 0 auto;
-        height: 90vh;
+@media screen and (min-width: 768px) {
+
+    .main-img--container {
+        padding-top: 5rem;
     }
-
-    .main-content h1 {
-        font-size: 2.5rem;
-    }
-
-    .main-content h2 {
-        font-size: 3rem;
-    }
-
-    .main-content p {
-        font-size: 1.5rem;
-    }
-}
-
-
+   
+} 
 
 /* Services section CSS */
 
@@ -325,12 +310,13 @@ nav a:hover {
     background-color: #B65B5D;
     background-image: linear-gradient(to right, #B65B5D 0%, #E5C05F 100%);
     background-size: 100%;
-    margin-bottom: 5rem;
+    margin-bottom: 2rem;
     font-size: 2.5rem;
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    text-align: center;
 }
 
 .services-container {
@@ -394,105 +380,14 @@ nav a:hover {
     transition: 0.3s ease-in;
 }
 
-/* .services {
-    background: #000;
-    color: #E8E9F3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    height: 100vh;
-}
+/* Responsiveness for Services */
 
-.services-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-}
-
-.services-card {
-    margin: 1rem;
-    height: 525px;
-    width: 400px;
-    border-radius: 4px;
-    background-image: linear-gradient(
-        to bottom, rgba(0,0,0,0) 0%, 
-        rgb(0, 0, 0, .9) 100%), 
-        url('/images/Cribz-awards.jpg');
-    background-size: cover;
-    position: relative;
-    color: #E8E9F3;
-    transition: 0.3s ease-in;
-}
-
-.services-card:nth-child(2) {
-    background-image: linear-gradient(
-        to bottom, rgba(0,0,0,0) 0%, 
-        rgba(0, 0, 0, 0.5) 100%), 
-        url('/images/Cribz-puppy.jpg');
-}
-
-.services h2 {
-    position: absolute;
-    top: 360px;
-    left: 30px;
-}
-
-.services p { 
-    position: absolute;
-    top: 400px;
-    left: 30px;
-}
-
-.services-card button {
-    color: #332723;
-    padding: 10px 20px;
-    border: none;
-    outline: none;
-    border-radius: 4px;
-    background: #E5C05F;
-    position: absolute;
-    top: 440px;
-    left: 30px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-}
-
-.services-card button:hover {
-    background: transparent;
-    border: 1px solid #E5C05F;
-    color: #E5C05F;
-    transition: all 0.3s;
-}
-
-.services-card:hover {
-    transform: scale(1.075);
-    transition: 0.3s ease-in;
-}
-
-@media screen and (max-width: 960px) {
-    .services {
-        height: 1600px;
-    }
-
-    .services h1 {
-        font-size: 2rem;
-    }
-}
-
-@media screen and (max-width:480px) {
-    .services {
-        height: 1400px;
-    }
-
-    .services h1 {
-        font-size: 1.2rem;
-    }
-
+@media screen and (min-width: 768px) {
     .services-card {
-        width: 400px;
+        width: 22rem;
+        height: 35rem;
     }
-} */
+}
 
 /* Footer CSS */
 
@@ -520,10 +415,6 @@ nav a:hover {
     max-width: 1000px;
     display: flex;
     justify-content: center;
-}
-
-.footer-links--wrapper {
-    display: flex;
 }
 
 .footer-links--items {
@@ -599,7 +490,7 @@ nav a:hover {
     transition: 0.3s ease-in;
 }
 
-@media screen and (max-width: 820px) {
+/* @media screen and (max-width: 820px) {
     .footer-links--wrapper {
         flex-direction: column;
     }
@@ -611,4 +502,4 @@ nav a:hover {
     .website-rights {
         margin-bottom: 1.5rem;
     }
-}
+} */
