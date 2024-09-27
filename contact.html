@@ -7,60 +7,42 @@
     <link rel="stylesheet" href="styles.css">
     <script src="https://kit.fontawesome.com/ccbb7759c2.js" crossorigin="anonymous"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <!-- Navbar Section -->
-    <nav class="navbar">
-        <div class="navbar-container">
-            <a href="/" id="navbar-logo">
-                <i class="fa-solid fa-paw"></i>Cribz Kennels
-            </a>
-            <div class="navbar-toggle" id="mobile-menu">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-            <ul class="navbar-menu">
-                <li class="navbar-item">
-                    <a href="/" class="navbar-links">
-                        Home
-                    </a>
-                </li>
-                <li class="navbar-item">
-                    <a href="/about.html" class="navbar-links">
-                        About Us
-                    </a>
-                </li>
-                <li class="navbar-item">
-                    <a href="/dogs.html" class="navbar-links">
-                        Our Dogs
-                    </a>
-                </li>
-                <li class="navbar-btn">
-                    <a href="/contact.html" class="button">
-                        Contact Us
-                    </a>
-                </li>
-                
+    <header>
+        <a href="/" class="navbar-logo">
+            <i class="fa-solid fa-paw"></i>Cribz Kennels
+        </a>
+        <input type="checkbox" class="nav-toggle" id="nav-toggle">
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="./dogs.html">The Puppies</a></li>
+                <li><a href="./dogs.html">The Parents</a></li>
+                <li><a href="./dogs.html">The Breed</a></li>
+                <li><a href="./about.html">About Us</a></li>
+                <li><a href="./contact.html">Contact Us</a></li>
             </ul>
-        </div>
-    </nav>
+        </nav>
+        <label for="nav-toggle" class="nav-toggle-label">
+            <span></span>
+        </label>
+    </header>
 
     <!-- Hero Section -->
     <div class="main">
-        <div class="main-container">
             <div class="main-content">
-                <h1>Cribz Kennels</h1>
-                <h2>Bullies</h2>
+                <h1>Contact Form Will Go Here</h1>
                 <p>See what makes us different.</p>
                 <button class="main-btn"><a href="/">Get Started</a></button>
             </div>
             <div class="main-img--container">
-                <img src="/images/undraw_dog.svg" alt="Cribz Kennels logo" id="main-img">
+                <img src="./images/Cribz-logo.svg" alt="Cribz Kennels logo" id="main-img">
             </div>
-        </div>
     </div>
 
     <!-- Services Section -->
@@ -68,13 +50,17 @@
         <h1>See what the hype is about</h1>
         <div class="services-container">
             <div class="services-card">
-                <h2>True Pedigree</h2>
-                <p>Best of Breed</p>
+                <div class="card-text">
+                    <h2>True Pedigree</h2>
+                    <p>Best of Breed</p>
+                </div>
                 <button>See Our Pups</button>
             </div>
             <div class="services-card">
-                <h2>Looking to Own?</h2>
-                <p>Take One Home</p>
+                <div class="card-text">
+                    <h2>Looking to Own?</h2>
+                    <p>Take One Home</p>
+                </div>
                 <button>Find Out How</button>
             </div>
         </div>
@@ -83,7 +69,6 @@
      <!-- Footer Section -->
       <div class="footer-container">
         <div class="footer-links">
-            <div class="footer-links--wrapper">
                 <div class="footer-links--items">
                     <h2>About</h2>
                     <a href="/">Puppies</a>
@@ -99,25 +84,14 @@
                     <a href="/">Terms of Service</a>
                     <a href="/">More</a>
                 </div>
-            </div>
-            <div class="footer-links--wrapper">
                 <div class="footer-links--items">
                     <h2>Social</h2>
-                    <a href="/">Facebook</a>
-                    <a href="/">Instagram</a>
-                    <a href="/">Tik Tok</a>
+                    <a href="https://www.facebook.com/profile.php?id=100090604874373">Facebook</a>
+                    <a href="https://www.instagram.com/cribzkennelsbullies">Instagram</a>
+                    <a href="https://www.tiktok.com/@cribzkennels">Tik Tok</a>
                     <a href="/">X</a>
                     <a href="/">More</a>
                 </div>
-                <div class="footer-links--items">
-                    <h2>About Us</h2>
-                    <a href="/">Puppies</a>
-                    <a href="/">Happy Families</a>
-                    <a href="/">Reserve</a>
-                    <a href="/">Terms of Service</a>
-                    <a href="/">More</a>
-                </div>
-            </div>
         </div>
         <div class="social-media">
             <div class="social-media--wrapper">
@@ -126,7 +100,7 @@
                         <i class="fa-solid fa-paw"></i>Cribz Kennels
                     </a>
                 </div>
-                <p class="website-rights">Cribz Kennels 2024. All Rights Reserved</p>
+                <p class="website-rights">©Cribz Kennels 2024. All Rights Reserved</p>
                 <div class="social-icons">
                     <a href="https://www.facebook.com/profile.php?id=100090604874373" class="social-icon--link" target="_blank">
                         <i class="fab fa-facebook"></i>
@@ -141,7 +115,5 @@
             </div>
         </div>
       </div>
-
-    <script src="app.js"></script>
-</body>
+    </body>
 </html>
