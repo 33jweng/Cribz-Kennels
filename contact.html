@@ -15,12 +15,12 @@
     <!-- Navbar Section -->
     <header>
         <a href="/" class="navbar-logo">
-            <i class="fa-solid fa-paw"></i>Cribz Kennels
+            <i class="fa-solid fa-paw"></i> Cribz Kennels
         </a>
         <input type="checkbox" class="nav-toggle" id="nav-toggle">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
+                <li><a href="./index.html">Home</a></li>
                 <li><a href="./dogs.html">The Puppies</a></li>
                 <li><a href="./dogs.html">The Parents</a></li>
                 <li><a href="./dogs.html">The Breed</a></li>
@@ -34,43 +34,48 @@
     </header>
 
     <!-- Hero Section -->
-    <div class="main">
-            <div class="main-content">
-                <h1>Contact Form Will Go Here</h1>
-                <p>See what makes us different.</p>
-                <button class="main-btn"><a href="/">Get Started</a></button>
-            </div>
-            <div class="main-img--container">
-                <img src="./images/Cribz-logo.svg" alt="Cribz Kennels logo" id="main-img">
-            </div>
-    </div>
-
-    <!-- Services Section -->
-     <div class="services">
-        <h1>See what the hype is about</h1>
-        <div class="services-container">
-            <div class="services-card">
-                <div class="card-text">
-                    <h2>True Pedigree</h2>
-                    <p>Best of Breed</p>
-                </div>
-                <button>See Our Pups</button>
-            </div>
-            <div class="services-card">
-                <div class="card-text">
-                    <h2>Looking to Own?</h2>
-                    <p>Take One Home</p>
-                </div>
-                <button>Find Out How</button>
-            </div>
+    <section class="contact-section">
+        <div class="contact-intro">
+          <h2 class="contact-title">Get in Touch</h2>
+          <p class="contact-description">
+            Fill out the form below and we'll get back to you as soon as possible!
+          </p>
         </div>
-     </div>
+      
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+      
+          <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
+          <input type="hidden" name="subject" value="New Contact Form Submission from Web3Forms" />
+          <input type="hidden" name="from_name" value="My Website" />      
+          <div class="form-group-container">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input id="name" name="name" class="form-input" placeholder="Your name" type="text" />
+            </div>
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input id="email" name="email" class="form-input" placeholder="Your email" type="email" />
+            </div>
+            <div class="form-group">
+              <label for="phone" class="form-label">Phone</label>
+              <input id="phone" name="phone" class="form-input" placeholder="+0 (123) 456-7890" type="text" />
+            </div>
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-textarea" id="message" name="message" placeholder="Your message for us."></textarea>
+            </div>
+          </div>
+          <button class="form-submit" type="submit">Send Message</button>
+        </form>
+      
+      </section>
+
 
      <!-- Footer Section -->
       <div class="footer-container">
         <div class="footer-links">
                 <div class="footer-links--items">
-                    <h2>About</h2>
+                    <h2>About Us</h2>
                     <a href="/">Puppies</a>
                     <a href="/">Happy Families</a>
                     <a href="/">Reserve</a>
