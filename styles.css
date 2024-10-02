@@ -676,6 +676,12 @@ nav a:hover {
     display: grid;
     grid-template-columns: 2rem 300px 2rem;
     grid-template-rows: repeat(3, auto);
+    transition: 0.3s ease-in;
+}
+
+.dog-card:hover {
+    transform: scale(1.075);
+    transition: 0.3s ease-in;
 }
 
 .dog-info {
