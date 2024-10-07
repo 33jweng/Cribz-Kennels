@@ -24,6 +24,10 @@ body {
 p {
     color: var(--neutral);
 }
+
+a {
+    text-decoration: none;
+}
 /* Navigation CSS */
 
 header {
@@ -249,7 +253,7 @@ nav a:hover {
 }
 
 .main-btn {
-    background-image: linear-gradient(to top, var(--accent-two) 0%, var(--accent-one) 100%);
+    background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
     padding: 1.25rem 2.5rem;
     border: none;
     border-radius: .3rem;
@@ -307,23 +311,27 @@ nav a:hover {
 /* Services section CSS */
 
 .services {
-    background: #000;
     color: #E8E9F3;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
+.services-title {
+    width: 100%;
+}
+
 .services h1 {
     background-color: var(--secondary);
-    background-image: linear-gradient(to right, var(--secondary) 0%, var(--primary) 100%);
-    background-size: 100%;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
+    background-image: linear-gradient(to bottom, var(--primary) 20%, var(--secondary) 50%, var(--dark) 100%);
     -webkit-background-clip: text;
     -moz-background-clip: text;
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
+    background-size: 100%;
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+    font-weight: 400;
     text-align: center;
 }
 
@@ -334,10 +342,10 @@ nav a:hover {
 }
 
 .services-card {
-    margin: 1rem;
+    margin: 3rem;
     height: 25rem;
     width: 17rem;
-    border-radius: .3rem;
+    border-radius: 5px;
     background-image: linear-gradient(
         to bottom, rgba(0,0,0,0) 0%, 
         rgb(0, 0, 0, .9) 100%), 
@@ -346,7 +354,21 @@ nav a:hover {
     position: relative;
     color: #E8E9F3;
     transition: 0.3s ease-in;
+    box-shadow: 5px 5px 30px #3D3D3D;
 }
+
+.services-card::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    left: 0;
+    top: 0;
+    position: absolute;
+    box-shadow: 5px 5px 10px 5px #000;
+    z-index: 1;
+}
+
 
 .services-card:nth-child(2) {
     background-image: linear-gradient(
@@ -362,7 +384,7 @@ nav a:hover {
 }
 
 .services-card button {
-    color: #332723;
+    color: var(--dark);
     padding: 10px 20px;
     padding: .5rem 1rem;
     border: none;
@@ -375,6 +397,7 @@ nav a:hover {
     font-size: 1rem;
     cursor: pointer;
     transition: all 0.3s;
+    z-index: 99;
 }
 
 .services-card button:hover {
@@ -387,6 +410,14 @@ nav a:hover {
 .services-card:hover {
     transform: scale(1.05);
     transition: 0.3s ease-in;
+}
+
+.services-card a {
+    color: var(--dark);
+}
+
+.services-card a:hover {
+    color: var(--primary);
 }
 
 /* Responsiveness for Services */
@@ -656,88 +687,168 @@ nav a:hover {
     font-weight: 300;
 }
 
-.studs-section {
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.studs-section > * {
-    flex: 1 1 50%;
-
-}
 
 /* Dog Card CSS */
 
-.dog-card {
-    display: grid;
-    grid-template-columns: 1.5rem 300px 1.5rem;
-    grid-template-rows: repeat(3, auto);
-    transition: 0.3s ease-in;
+/* Mobile - 360px */
+@media only screen and (min-width: 0rem) {
+    #sbs-290 {
+        padding: var(--sectionPadding);
+    }
+    #sbs-290 .cs-container {
+        width: 100%;
+        /* changes to 1280px at tablet */
+        max-width: 34.375rem;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        /* 48px - 64px */
+        gap: clamp(3rem, 6vw, 4rem);
+    }
+    #sbs-290 .cs-content {
+        /* set text align to left if content needs to be left aligned */
+        text-align: left;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        /* centers content horizontally, set to flex-start to left align */
+        align-items: flex-start;
+    }
+
+    #sbs-290 .cs-text {
+        margin-bottom: 1rem;
+    }
+    #sbs-290 .cs-text:last-of-type {
+        margin-bottom: 2rem;
+    }
+    #sbs-290 .cs-ul {
+        width: 100%;
+        margin: 0 0 2rem 0;
+        padding-left: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+    }
+    #sbs-290 .cs-li {
+        font-size: var(--bodyFontSize);
+        line-height: 1.5em;
+        list-style: none;
+        text-align: left;
+        width: 100%;
+        max-width: 28.125rem;
+        margin: 0;
+        color: var(--bodyTextColor);
+        position: relative;
+    }
+    #sbs-290 .cs-li:before {
+        /* bullet */
+        content: "";
+        width: 4px;
+        height: 4px;
+        border-radius: 50%;
+        background: currentColor;
+        opacity: 1;
+        position: absolute;
+        display: block;
+        top: 0.625rem;
+        left: -0.9375rem;
+    }
+    #sbs-290 .cs-button-solid {
+        font-size: 1rem;
+        /* 46px - 56px */
+        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+        text-decoration: none;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+        color: #fff;
+        min-width: 9.375rem;
+        padding: 0 1.5rem;
+        background-color: var(--primary);
+        border-radius: 0.25rem;
+        display: inline-block;
+        position: relative;
+        z-index: 1;
+        /* prevents padding from adding to the width */
+        box-sizing: border-box;
+    }
+    #sbs-290 .cs-button-solid:before {
+        content: "";
+        position: absolute;
+        height: 100%;
+        width: 0%;
+        background: #000;
+        opacity: 1;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        border-radius: 0.25rem;
+        transition: width 0.3s;
+    }
+    #sbs-290 .cs-button-solid:hover:before {
+        width: 100%;
+    }
+    #sbs-290 .cs-image-group {
+        /* scaling entire section down. font-size starts at a min in vw, and stops when that value reaches 1em (16px). Since we want the picture elements to base their font size on the parent and not the root, we use ems for this entire section  */
+        font-size: min(1.978vw, 0.791em);
+        width: 46.0625em;
+        height: 45.9375em;
+        position: relative;
+    }
+    #sbs-290 .cs-picture {
+        border-radius: 1em;
+        /* clips the img tag corners */
+        overflow: hidden;
+        position: absolute;
+        display: block;
+    }
+    #sbs-290 .cs-picture img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+    #sbs-290 .cs-picture1 {
+        width: 24.875em;
+        height: 24.5625em;
+        top: 0;
+        left: 0;
+    }
+    #sbs-290 .cs-picture2 {
+        width: 20em;
+        height: 19.875em;
+        top: 4.6875em;
+        right: 0;
+    }
+    #sbs-290 .cs-picture3 {
+        width: 20.3125em;
+        height: 20.125em;
+        bottom: 0;
+        left: 4.4375em;
+    }
+    #sbs-290 .cs-picture4 {
+        width: 16.5em;
+        height: 16.375em;
+        bottom: 3.75em;
+        right: 3.5625em;
+    }
+   
 }
-
-.dog-card:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in;
-}
-
-.dog-info {
-    background: linear-gradient(135deg, var(--accent-one) 0%, var(--accent-two) 100%);
-
-    grid-column: 1 / -1;
-    grid-row: 1 / 3;
-
-    display: grid;
-    grid-template-rows: subgrid;
-    grid-template-columns: subgrid;
-
-    border-radius: .5rem;
-}
-
-.dog-info div {
-    grid-column: 2 / 3;
-
-    padding-block: 1rem;
-}
-
-.dog-info h3 {
-    font-size: 1.75rem;
-    font-weight: 400; 
-    /* background-image: linear-gradient(110deg, var(--primary) 0%, var(--secondary) 50%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent; */
-    color: var(--dark-two);
-}
-
-.stat-title {
-    color: var(--dark-two);
-}
-
-.stat-title::after {
-    content: " :";
-    color: var(--primary);
-    font-weight: 900;
-}
-
-.stat-data {
-    padding-left: 1.5rem;
-    color: var(--dark-two);
-}
-
-.dog-pic {
-    background-color: var(--neutral);
-    grid-column: 2 / 3;
-    grid-row: 2 / 4;
-    
-    width: 300px;
-    height: 400px;
-    border-radius: .5rem;
-    box-shadow: 0 0 1rem black;
-}
-
-.dog-pic img {
-    width: 300px;
-    border-radius: .5rem;
+/* Desktop - 1024px */
+@media only screen and (min-width: 64rem) {
+    #sbs-290 .cs-container {
+        max-width: 80rem;
+        flex-direction: row;
+        align-items: center;
+    }
+    #sbs-290 .cs-image-group {
+        /* reset the scale */
+        font-size: min(1.1vw, 1em);
+        /* prevent flexbox from squishing it */
+        flex: none;
+    }
 }
