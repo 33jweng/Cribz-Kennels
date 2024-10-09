@@ -81,7 +81,7 @@ nav li {
 nav a {
     color: var(--neutral);
     text-decoration: none;
-    font-family: 'merriweather';
+    font-family: 'open sans';
     font-size: 1.5rem;
     text-transform: uppercase;    
     transition: all 0.5s ease;
@@ -240,7 +240,7 @@ nav a:hover {
 
 .main p {
     color: var(--neutral);
-    font-family: 'merriweather';
+    font-family: 'open sans';
     font-size: 1.25rem;
     font-weight: 100;
 }
@@ -323,7 +323,7 @@ nav a:hover {
 }
 
 .why-us-text p {
-    font-family: 'merriweather';
+    font-family: 'open sans';
     padding-top: 1rem;
     font-size: 1rem;
     line-height: 1.5rem;
@@ -335,7 +335,7 @@ nav a:hover {
 }
 
 .why-us-text ul li {
-    font-family: 'merriweather';
+    font-family: 'open sans';
 }
 
 .why-us-text ul li::before {
