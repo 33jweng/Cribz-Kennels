@@ -781,12 +781,14 @@ nav a:hover {
 .dogs-main {
     background-color: var(--black);
     padding: 6rem 2rem 2rem;
-    display: flex;
-    flex-wrap: wrap;
 }
 
-.dogs-main > * {
-    flex: 1 1 50%;
+.dog-section {
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
 }
 
 .dogs-img {
@@ -833,6 +835,7 @@ nav a:hover {
         padding: 1rem;
         background-color: var(--dark-two);
         border-radius: .5rem;
+        width: 100%;
     }
     .dog-card .dc-container {
         width: 100%;
