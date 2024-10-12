@@ -423,7 +423,142 @@ nav a:hover {
     color: var(--primary);
 }
 
+/* FAQ section CSS */
 
+/*-- -------------------------- -->
+<---            FAQ             -->
+<--- -------------------------- -*/
+
+/* Mobile - 320px */
+
+    #faq-1741 {
+      padding: 1rem;
+      font-family: var(--font-p);
+    }
+    #faq-1741 .cs-container {
+      
+      /* changes to 1280px at desktop */
+      
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      /* 48px - 64px */
+      gap: clamp(3rem, 6vw, 4rem);
+    }
+    #faq-1741 .cs-content {
+      text-align: center;
+    }
+
+    .cs-title {
+        font-family: var(--font-h);
+    }
+   
+    #faq-1741 .cs-faq-group {
+      display: flex;
+      flex-direction: column;      
+      gap: 0.5rem;
+    }
+    #faq-1741 .cs-faq-item {
+      list-style: none;
+    }
+    #faq-1741 .cs-faq-item.active .cs-button {
+      background-color: var(--primary);
+      color: var(--dark);
+    }
+    #faq-1741 .cs-faq-item.active .cs-button:before {
+      background-color: var(--dark);
+      transform: rotate(315deg);
+    }
+    #faq-1741 .cs-faq-item.active .cs-button:after {
+      background-color: var(--dark);
+      transform: rotate(-315deg);
+    }
+    #faq-1741 .cs-faq-item.active .cs-item-text {
+      height: auto;
+      /* 16px - 24px */
+      padding: 1rem clamp(1rem, 2vw, 1.5rem);
+      opacity: 1;
+      border: 1px solid var(--primary);
+    }
+    #faq-1741 .cs-button {
+      /* 16px - 20px */
+      font-size: clamp(1rem, 2.5vw, 1.25rem);
+      font-weight: bold;
+      line-height: 1.2em;
+      text-align: left;
+      width: 100%;
+      padding: 1rem;
+      padding-left: 3.25rem;
+      background-color: transparent;
+      color: var(--neutral);
+      border: 1px solid var(--primary);
+      display: block;
+      position: relative;
+      transition: background-color 0.3s, color 0.3s;
+      cursor: pointer;
+    }
+    #faq-1741 .cs-button:hover {
+      cursor: pointer;
+    }
+    #faq-1741 .cs-button:before {
+      /* left line */
+      content: "";
+      width: 0.5rem;
+      height: 0.125rem;
+      background-color: var(--neutral);
+      opacity: 1;
+      display: block;
+      position: absolute;
+      top: 45%;
+      left: 1.125rem;
+      transform: rotate(45deg);
+      transition: transform 0.5s;
+      /* animate the transform from the left side of the x axis, and the center of the y */
+      transform-origin: left center;
+    }
+    #faq-1741 .cs-button:after {
+      /* right line */
+      content: "";
+      width: 0.5rem;
+      height: 0.125rem;
+      background-color: var(--neutral);
+      opacity: 1;
+      display: block;
+      position: absolute;
+      top: 45%;
+      left: 1.3125rem;
+      transform: rotate(-45deg);
+      transition: transform 0.5s;
+      /* animate the transform from the right side of the x axis, and the center of the y */
+      transform-origin: right center;
+    }
+    #faq-1741 .cs-item-text {
+      /* 14px - 16px */
+      font-size: clamp(0.875rem, 1.5vw, 1rem);
+      line-height: 1.5em;
+      height: 0;
+      margin: 0;
+      /* clips the text so it doesn't show up */
+      overflow: hidden;
+      color: var(--neutral);
+      opacity: 0;
+      transition: opacity 0.3s, padding-bottom 0.3s;
+    }
+ 
+  /* Desktop - 1024px */
+  @media only screen and (min-width: 64rem) {
+    #faq-1741 .cs-container {
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+    }
+    #faq-1741 .cs-content {
+      text-align: left;
+      align-items: flex-start;
+      /* prevents flexbox from squishing it */
+      flex: none;
+    }
+  }
 /* Services section CSS */
 
 .services {
