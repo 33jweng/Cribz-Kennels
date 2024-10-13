@@ -6,8 +6,8 @@
     --dark: #332723;
     --dark-two: #141414;
     --neutral: #E8E9F3;
-    --font-h: 'montserrat';
-    --font-p: 'open sans';
+    --font-h: 'montserrat', serif;
+    --font-p: 'open sans', serif;
 }
 
 * {
@@ -544,20 +544,38 @@ nav a:hover {
       opacity: 0;
       transition: opacity 0.3s, padding-bottom 0.3s;
     }
- 
-  /* Desktop - 1024px */
-  @media only screen and (min-width: 64rem) {
-    #faq-1741 .cs-container {
-      flex-direction: row;
-      justify-content: space-around;
-      align-items: center;
+
+    .faq-btn {
+        margin-top: 0;
     }
+ 
+  @media only screen and (min-width: 48rem) {
+    #faq-1741 .cs-container {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      grid-template-areas: 
+        "text faqs"
+        "button faqs";
+      align-items: start;
+    }
+
     #faq-1741 .cs-content {
       text-align: left;
-      align-items: flex-start;
-      /* prevents flexbox from squishing it */
-      flex: none;
+      grid-area: text;  
+      align-self: end; 
+      padding-left: 4rem;  
     }
+
+    .faq-btn {
+        grid-area: button;
+        justify-self: center;
+    }
+
+    .cs-flex-group {
+        grid-area: faqs;
+    }
+
   }
 /* Services section CSS */
 
@@ -571,20 +589,12 @@ nav a:hover {
 .services-title {
     background-color: var(--black);
     width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
 }
 
-.services h1 {
-    background-color: var(--secondary);
-    background-image: linear-gradient(to bottom, var(--primary) 20%, var(--secondary) 50%, var(--dark) 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-    background-size: 100%;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
+.services-title h1 {
     font-weight: 400;
-    text-align: center;
 }
 
 .services-container {
@@ -636,10 +646,6 @@ nav a:hover {
    left: 1em;
 }
 
-.card-text h2 {
-    
-}
-
 .services-card button {
     color: var(--dark);
     padding: .5rem 1rem;
@@ -687,14 +693,11 @@ nav a:hover {
 
 /* Footer CSS */
 
-.footer-container {
-    background-color: var(--black);
-    color: var(--neutral);
-    padding: 5rem 0;
+.footer {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    padding-top: 3rem;
 }
 
 #footer-logo {
@@ -713,6 +716,7 @@ nav a:hover {
     grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
     grid-template-rows: 1fr 1fr;
     gap: .5rem;
+    justify-items: center;
 }
 
 .contact-social-wrapper {
@@ -723,12 +727,12 @@ nav a:hover {
 .footer-links-items {
     display: flex;
     flex-direction: column;
-    margin: 16px;
     text-align: left;
 }
 
 .footer-links-items:first-child {
     grid-row: 1 / 3;
+    padding-left: 2rem;
 }
 
 #contact-footer {
@@ -757,17 +761,16 @@ nav a:hover {
     font-size: 2rem;
     color: var(--primary);
     transition: 0.3s ease-in;
+    padding: 1.5rem;
+}
+
+.social-icons {
+    padding-block: 1rem;
 }
 
 .social-icon-link:hover {
     color: var(--secondary);
     transition: 0.3s ease-in;
-}
-
-.social-icons {
-    display: flex;
-    justify-content: space-around;
-    padding-top: 1em;
 }
 
 #footer-logo {
