@@ -73,7 +73,7 @@ nav {
     text-align: right;
     top: 100%;
     left: 0;
-    background: var(--dark-two);
+    background: var(--dark-grey);
     width: 100%;
     transform: scale(1, 0);
     transition: transform 400ms ease-in-out;
@@ -109,7 +109,7 @@ nav a:hover {
 }
 
 .nav-toggle:checked ~ nav {
-    background-color: var(--black);
+    background-color: var(--dark-grey);
     transform: scale(1, 1);
 }
 
@@ -294,7 +294,54 @@ nav a:hover {
 #main-img {
     width: 100%;
     box-shadow: 1rem 1rem var(--primary);
-    margin-left: -.5rem;
+    margin-left: -.75rem;
+}
+
+/* Breeders Section */
+
+.breeders {
+    background-color: var(--black);
+    padding-bottom: 1rem;
+}
+
+.breeders-container {
+    display: flex;
+    flex-wrap: wrap-reverse;
+}
+
+.breeders-container > * {
+    flex: 1 1 50%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+}
+
+.breeders-img {
+    width: 100%;
+    min-width: 20rem;
+    max-width: 50rem;
+    padding-top: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.breeders-img img {
+    width: 90%;
+    max-width: 30rem;
+    box-shadow: -1rem 1rem var(--primary);
+    margin-right: -.75rem;
+}
+
+.breeders-text {
+    padding-inline: 2rem;
+    line-height: 1.5rem;
+}
+
+.breeders-text h2 {
+    padding-block: 1rem;
+    font-weight: 600;
 }
 
 /* Intro Section CSS */
@@ -305,7 +352,7 @@ nav a:hover {
 
 .intro-container {
     display: flex;
-    flex-wrap: wrap-reverse;
+    flex-wrap: wrap;
 }
 
 .intro-container > * {
@@ -461,9 +508,15 @@ nav a:hover {
     #faq-1741 .cs-faq-item {
       list-style: none;
     }
+
+    .cs-button {
+        border-radius: .25rem;
+    }
+    
     #faq-1741 .cs-faq-item.active .cs-button {
       background-color: var(--primary);
       color: var(--dark);
+      border-radius: .25rem;
     }
     #faq-1741 .cs-faq-item.active .cs-button:before {
       background-color: var(--dark);
@@ -479,6 +532,7 @@ nav a:hover {
       padding: 1rem clamp(1rem, 2vw, 1.5rem);
       opacity: 1;
       border: 1px solid var(--primary);
+      border-radius: .25rem;
     }
     #faq-1741 .cs-button {
       /* 16px - 20px */
@@ -869,8 +923,10 @@ nav a:hover {
     border: none;
     width: 100%;
     margin-top: 1.2rem;
-    background-image: linear-gradient(to top, var(--accent-one) 0%, var(--accent-two) 100%);
-    color: var(--neutral);
+    background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
+    color: var(--dark-two);
+    font-size: 1rem;
+    font-weight: 500;
     padding: 13px 5px;
     border-radius: 0.3rem;
 }
