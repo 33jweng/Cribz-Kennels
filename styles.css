@@ -474,10 +474,23 @@ nav a:hover {
 <---           Reviews          -->
 <--- -------------------------- -*/
 
-.review-scroller {
-    align-items: center;
+.reviews-title {
+    background-color: var(--black);
+    width: 100%;
+    text-align: center;
+    padding-bottom: 2rem;
 }
 
+.reviews-title h1 {
+    font-weight: 400;
+    font-size: 3rem;
+}
+
+.review-scroller {
+    align-items: center;
+    padding-block: 2rem;
+    padding-left: .5rem;
+}
 
 .review-card {
     display: grid;
@@ -493,7 +506,7 @@ nav a:hover {
     border-radius: .25rem;
     box-shadow: .25rem .25rem .5rem .25rem var(--black);
     transition: 0.3s ease-in-out;
-    width: 75vw;
+    height: 100%;
 }
 
 .review-card img {
@@ -508,8 +521,10 @@ nav a:hover {
 }
 
 .review-img {
-    width: 100%;
+    max-height: 20rem;
     grid-area: img;
+    align-self: center;
+    justify-self: center;
 }
 
 .review-title {
@@ -523,39 +538,61 @@ nav a:hover {
 
 .review-text {
     grid-area: text;
-    line-height: 2.5rem;
+    line-height: 1.5rem;
 }
 
 blockquote:before {
     content: "\201C";
-    font-size: 2rem;
     color: var(--primary);
 }
 blockquote:after {
     content: "\201D";
-    font-size: 2rem;
     color: var(--primary);
 }
 
 .review-block-1 {
     grid-area: date;
+    align-self: self-end;
 }
 
 .review-block-2 {
     grid-area: age;
+    align-self: self-end;
 }
 
 .rb-small {
     font-size: .75rem;
 }
 
-@media screen and (min-width: 40rem) {
+@media screen and (min-width: 50rem) {
+    .review-card {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            'img name name'
+            'img star star'
+            'img text text'
+            'img date age';
+        width: 75vw;
+    }
+
+    .review-img {
+        max-height: 30rem;
+    }
+    
+}
+
+@media screen and (min-width: 65rem) {
     .review-card {
         grid-template-columns: repeat(3, 1fr);
         grid-template-areas:
             'img name star'
             'img text text'
             'img date age';
+    }
+
+    .review-img {
+        max-height: 30rem;
+        align-self: center;
     }
     
 }
