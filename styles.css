@@ -470,7 +470,96 @@ nav a:hover {
     color: var(--primary);
 }
 
-/* FAQ section CSS */
+/*-- -------------------------- -->
+<---           Reviews          -->
+<--- -------------------------- -*/
+
+.review-scroller {
+    align-items: center;
+}
+
+
+.review-card {
+    display: grid;
+    grid-template-areas: 
+    'img img'
+    'name name'
+    'star star'
+    'text text'
+    'date age';
+    gap: var(--_spacer);
+    padding: var(--_spacer);
+    background: var(--dark-two);
+    border-radius: .25rem;
+    box-shadow: .25rem .25rem .5rem .25rem var(--black);
+    transition: 0.3s ease-in-out;
+    width: 75vw;
+}
+
+.review-card img {
+    border-radius: .25rem;
+}
+
+.review-card:hover {
+    box-shadow: .25rem .25rem 1.75rem .25rem var(--black);
+    transform: scale(1.05);
+    transition: 0.3s ease-in-out;
+    /* filter: none; */
+}
+
+.review-img {
+    width: 100%;
+    grid-area: img;
+}
+
+.review-title {
+    grid-area: name;
+}
+
+.star-rating {
+    grid-area: star;
+    color: var(--primary);
+}
+
+.review-text {
+    grid-area: text;
+    line-height: 2.5rem;
+}
+
+blockquote:before {
+    content: "\201C";
+    font-size: 2rem;
+    color: var(--primary);
+}
+blockquote:after {
+    content: "\201D";
+    font-size: 2rem;
+    color: var(--primary);
+}
+
+.review-block-1 {
+    grid-area: date;
+}
+
+.review-block-2 {
+    grid-area: age;
+}
+
+.rb-small {
+    font-size: .75rem;
+}
+
+@media screen and (min-width: 40rem) {
+    .review-card {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-areas:
+            'img name star'
+            'img text text'
+            'img date age';
+    }
+    
+}
+
 
 /*-- -------------------------- -->
 <---            FAQ             -->
@@ -988,6 +1077,13 @@ nav a:hover {
 .dogs-img {
     width: 100%;
     max-width: 25rem;
+    box-shadow: 1rem 1rem var(--primary);
+}
+
+.img-caption {
+    color: var(--black);
+    margin-top: -.5rem;
+    padding-left: 1.25rem;
 }
 
 .dogs-main h1 {
