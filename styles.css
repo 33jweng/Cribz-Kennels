@@ -22,7 +22,7 @@ body {
     color: var(--neutral);
 }
 
-h1, h2, h3 {
+h1, h2, h3{
     font-family: var(--font-h);
     background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
     background-size: 100%;
@@ -56,6 +56,7 @@ header {
 }
 
 .navbar-logo {
+    font-family: var(--font-h);
     font-weight: 600;
     background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
     background-size: 100%;
@@ -266,8 +267,7 @@ nav a:hover {
 }
 
 .footer-links-items h2 {
-    margin-bottom: 16px;
-    color: var(--primary);
+    margin-bottom: .5rem;
 }
 
 .footer-links-items a {
@@ -301,6 +301,7 @@ nav a:hover {
 
 #footer-logo {
     color: var(--primary);
+    font-family: var(--font-h);
     font-size: 2rem;
     transition: 0.3s ease-in;
 }
@@ -313,7 +314,10 @@ nav a:hover {
     color: var(--secondary);
     transition: 0.3s ease-in;
 }
-/* Hero Section CSS */
+
+/**------------------------------*/
+/**            Main              */
+/**------------------------------*/
 
 .main {
     background-color: var(--dark-two);
@@ -408,7 +412,6 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    justify-items: center;
 }
 
 .breeders-img {
@@ -955,358 +958,450 @@ blockquote:after {
     }
 }
 
+/**------------------------------*/
+/**           Puppies            */
+/**------------------------------*/
 
-/* Contact Us CSS */
-
-.contact-section {
-    background-color: var(--dark-two);
-    color: var(--primary);
-    width: 100%;
-    max-width: 800px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 6rem 4rem 2rem;
-  }
-
-  .contact-section h2 {
-    background-image: linear-gradient(to top, var(--primary) 0%, var(--secondary) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-  }
-  
-.contact-intro > * + * {
-    margin-top: 1rem;
-}
-  
-.contact-title {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
-    font-weight: 700;
-}
-  
-.contact-description {
-    color: gray;
-}
-  
-.form-group-container {
-    display: grid;
-    gap: 1rem;
-    margin-top: 2rem;
-}
-  
-.form-group {
-    display: flex;
-    flex-direction: column;
-}
-  
-.form-label {
-    margin-bottom: 0.5rem;
-}
-  
-.form-input,
-.form-textarea {
-    padding: 0.5rem;
-    border: 1px solid var(--neutral);
-    display: flex;
-    height: 2.5rem;
-    width: 100%;
-    border-radius: 0.5rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-}
-  
-.form-input::placeholder,
-.form-textarea:focus-visible {
-    color: gray;
-}
-  
-.form-input:focus-visible,
-.form-textarea:focus-visible {
-    outline: 2px solid var(--accent-one);
-    outline-offset: 2px;
-}
-  
-.form-textarea {
-    min-height: 120px;
-}
-  
-.form-submit {
-    border: none;
-    width: 100%;
-    margin-top: 1.2rem;
-    background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
-    color: var(--dark-two);
-    font-size: 1rem;
-    font-weight: 500;
-    padding: 13px 5px;
-    border-radius: 3rem;
-}
-  
-/* About Us CSS */
-
-.about-main {
-    padding: 6rem 2rem 2rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-}
-
-.about-main > * {
-    flex: 1 1 50%;
-    padding: 1rem;
-}
-
-.about-us {
-    width: 100%;
-    padding-top: 0;
-}
-
-.about-main h2 { 
-    font-size: 2.3rem;
-    text-transform: uppercase;
-    background-image: linear-gradient(to top, var(--primary) 0%, var(--secondary) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-#about-us-img {
-    height: 100%;
-    width: 100%;
-    min-width: 20rem;
-    max-width: 30rem;
-    padding-top: 4rem;
-}
-
-/* Dogs Page CSS */
-
-.dogs-main {
-    background-color: var(--black);
-    padding: 6rem 2rem 2rem;
-}
-
-.dog-section {
-    background-color: var(--black);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem;
-}
-
-.dogs-img {
-    width: 100%;
-    max-width: 25rem;
-    box-shadow: 1rem 1rem var(--primary);
-}
-
-.img-caption {
-    color: var(--black);
-    margin-top: -.5rem;
-    padding-left: 1.25rem;
-}
-
-.dogs-main h1 {
-    font-size: 4rem;
-    text-transform: uppercase;
-    background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-.dogs-main h2 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    background-image: linear-gradient(to top, var(--primary) 0%, var(--secondary) 100%);
-    background-size: 100%;
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    -moz-text-fill-color: transparent;
-}
-
-.dogs-main p {
-    color: #E8E9F3;
-    font-size: 1.25rem;
-    line-height: 2rem;
-    font-weight: 300;
-}
-
-
-/* Dog Card CSS */
-
-/* Mobile - 360px */
-@media only screen and (min-width: 0rem) {
-    .dog-card {
-        margin: 1rem;
-        padding: 1rem;
-        background-color: var(--dark-two);
-        border-radius: .5rem;
-        width: 100%;
+    .puppies {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 1rem;
     }
-    .dog-card .dc-container {
+
+    .puppies-img-container {
+        justify-self: center;
+        margin-left: -.75rem;
         width: 100%;
-        /* changes to 1280px at tablet */
-        max-width: 34.375rem;
-        margin: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        /* 48px - 64px */
-        gap: clamp(3rem, 6vw, 4rem);
-    }
-    .dog-card .dc-content {
-        /* set text align to left if content needs to be left aligned */
-        text-align: left;
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        /* centers content horizontally, set to flex-start to left align */
-        align-items: flex-start;
     }
 
-    .dog-card .dc-text {
-        margin-bottom: 1rem;
+    .upcoming-litters {
+        padding-inline: 2rem;
     }
-    .dog-card .dc-text:last-of-type {
-        margin-bottom: 2rem;
+
+    @media only screen and (min-width: 48rem) {
+        .puppies {
+            grid-template-columns: 1fr 1fr;
+            grid-template-areas: 
+                "img title"
+                "img text";
+        }
+
+        .puppies-img-container {
+            grid-area: img;
+        }
+
+        .puppies-title {
+            grid-area: title;
+            align-self: self-end;
+        }
+
+        .puppies-text {
+            grid-area: text;
+            align-self: self-start;
+        }
     }
-    .dog-card .dc-ul {
+
+/**------------------------------*/
+/**           Dogs               */
+/**------------------------------*/
+
+    .dogs-main {
+        background-color: var(--black);
+        padding: 6rem 2rem 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .dogs-main > * {
+        flex: 1 1 50%;
+    }
+
+    .dog-section {
+        background-color: var(--black);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    .dogs-img-container {
         width: 100%;
-        margin: 0 0 2rem 0;
+        min-width: 17.5rem;
+        max-width: 50rem;
+        margin-left: -.75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dogs-img {
+        width: 100%;
+        max-width: 30rem;
+        box-shadow: 1rem 1rem var(--primary);
+        
+    }
+
+    .img-caption {
+        color: var(--black);
+        margin-top: -.2rem;
         padding-left: 1.25rem;
-        display: flex;
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 0.5rem;
-    }
-    .dog-card .dc-li {
-        font-size: var(--bodyFontSize);
-        line-height: 1.5em;
-        list-style: none;
-        text-align: left;
-        width: 100%;
-        max-width: 28.125rem;
-        margin: 0;
-        color: var(--bodyTextColor);
-        position: relative;
-    }
-    .dog-card .dc-li:before {
-        /* bullet */
-        content: "";
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        background: var(--primary);
-        opacity: 1;
-        position: absolute;
-        display: block;
-        top: 0.625rem;
-        left: -0.9375rem;
-    }
-    .dog-card .dc-button-solid {
-        font-size: 1rem;
-        /* 46px - 56px */
-        line-height: clamp(2.875rem, 5.5vw, 3.5rem);
-        text-decoration: none;
-        text-align: center;
-        margin: 0;
-        color: var(--dark-two);
-        min-width: 9.375rem;
-        padding: 0 1.5rem;
-        background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
-        border-radius: 100rem;
-        display: inline-block;
-        position: relative;
-        z-index: 1;
-        /* prevents padding from adding to the width */
-        box-sizing: border-box;
-        transition: 0.3s ease-in-out;
     }
 
-    .dc-button-solid:hover {
-        box-shadow: 0 0 5px 1px var(--primary);
-        transition: 0.3s ease-in-out;
+    .dogs-main h1 {
+        font-size: 3rem;
+        font-weight: 600;
+        text-transform: uppercase;
+        background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
     }
-   
-    .dog-card .dc-image-group {
-        /* scaling entire section down. font-size starts at a min in vw, and stops when that value reaches 1em (16px). Since we want the picture elements to base their font size on the parent and not the root, we use ems for this entire section  */
-        font-size: min(1.978vw, 0.791em);
-        width: 46.0625em;
-        height: 45.9375em;
-        position: relative;
+
+    .dogs-main h2 {
+        font-size: 3rem;
+        text-transform: uppercase;
+        background-image: linear-gradient(to top, var(--primary) 0%, var(--secondary) 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
     }
-    .dog-card .dc-picture {
-        border-radius: 1em;
-        /* clips the img tag corners */
-        overflow: hidden;
-        position: absolute;
-        display: block;
+
+    .dogs-main p {
+        color: #E8E9F3;
+        font-size: 1.25rem;
+        line-height: 2rem;
+        font-weight: 300;
     }
-    .dog-card .dc-picture img {
-        position: absolute;
-        top: 0;
-        left: 0;
+
+    .dogs-main a {
+        color: var(--primary);
+        text-decoration: underline;
+        transition: 0.3s ease-in;
+        font-weight: 400;
+    }
+
+    .dogs-main a:hover {
+        color: var(--secondary);
+        transition: 0.3s ease-in;
+    }
+
+    .dogs-main-title {
+        padding-bottom: 2rem;
+    }
+    /* Dog Card CSS */
+
+    /* Mobile - 360px */
+    @media only screen and (min-width: 0rem) {
+        .dog-card {
+            margin: 1rem;
+            padding: 1rem;
+            background-color: var(--dark-two);
+            border-radius: .5rem;
+            width: 100%;
+        }
+        .dog-card .dc-container {
+            width: 100%;
+            /* changes to 1280px at tablet */
+            max-width: 34.375rem;
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            /* 48px - 64px */
+            gap: clamp(3rem, 6vw, 4rem);
+        }
+        .dog-card .dc-content {
+            /* set text align to left if content needs to be left aligned */
+            text-align: left;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            /* centers content horizontally, set to flex-start to left align */
+            align-items: flex-start;
+        }
+
+        .dog-card .dc-text {
+            margin-bottom: 1rem;
+        }
+        .dog-card .dc-text:last-of-type {
+            margin-bottom: 2rem;
+        }
+        .dog-card .dc-ul {
+            width: 100%;
+            margin: 0 0 2rem 0;
+            padding-left: 1.25rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            gap: 0.5rem;
+        }
+        .dog-card .dc-li {
+            font-size: var(--bodyFontSize);
+            line-height: 1.5em;
+            list-style: none;
+            text-align: left;
+            width: 100%;
+            max-width: 28.125rem;
+            margin: 0;
+            color: var(--bodyTextColor);
+            position: relative;
+        }
+        .dog-card .dc-li:before {
+            /* bullet */
+            content: "";
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            background: var(--primary);
+            opacity: 1;
+            position: absolute;
+            display: block;
+            top: 0.625rem;
+            left: -0.9375rem;
+        }
+        .dog-card .dc-button-solid {
+            font-size: 1rem;
+            /* 46px - 56px */
+            line-height: clamp(2.875rem, 5.5vw, 3.5rem);
+            text-decoration: none;
+            text-align: center;
+            margin: 0;
+            color: var(--dark-two);
+            min-width: 9.375rem;
+            padding: 0 1.5rem;
+            background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
+            border-radius: 100rem;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+            /* prevents padding from adding to the width */
+            box-sizing: border-box;
+            transition: 0.3s ease-in-out;
+        }
+
+        .dc-button-solid:hover {
+            box-shadow: 0 0 5px 1px var(--primary);
+            transition: 0.3s ease-in-out;
+        }
+    
+        .dog-card .dc-image-group {
+            /* scaling entire section down. font-size starts at a min in vw, and stops when that value reaches 1em (16px). Since we want the picture elements to base their font size on the parent and not the root, we use ems for this entire section  */
+            font-size: min(1.978vw, 0.791em);
+            width: 46.0625em;
+            height: 45.9375em;
+            position: relative;
+        }
+        .dog-card .dc-picture {
+            border-radius: 1em;
+            /* clips the img tag corners */
+            overflow: hidden;
+            position: absolute;
+            display: block;
+        }
+        .dog-card .dc-picture img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+        }
+        .dog-card .dc-picture1 {
+            width: 24.875em;
+            height: 24.5625em;
+            top: 0;
+            left: 0;
+        }
+        .dog-card .dc-picture2 {
+            width: 20em;
+            height: 19.875em;
+            top: 4.6875em;
+            right: 0;
+        }
+        .dog-card .dc-picture3 {
+            width: 20.3125em;
+            height: 20.125em;
+            bottom: 0;
+            left: 4.4375em;
+        }
+        .dog-card .dc-picture4 {
+            width: 16.5em;
+            height: 16.375em;
+            bottom: 3.75em;
+            right: 3.5625em;
+        }
+    
+    }
+    /* Desktop - 1024px */
+    @media only screen and (min-width: 64rem) {
+        .dog-card .dc-container {
+            max-width: 80rem;
+            flex-direction: row;
+            align-items: center;
+        }
+        
+        .dog-card .dc-image-group {
+            /* reset the scale */
+            font-size: min(1.1vw, 1em);
+            /* prevent flexbox from squishing it */
+            flex: none;
+        }
+        
+        .mom-card .dc-container {
+            flex-direction: row-reverse;
+        }
+    
+    }
+
+/**------------------------------*/
+/**           Bullies            */
+/**------------------------------*/
+
+    .bullies {
+        display: grid;
+        gap: 1rem;
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+
+
+/**------------------------------*/
+/**           About Us           */
+/**------------------------------*/
+
+    .about-main {
+        padding: 6rem 2rem 2rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .about-main > * {
+        flex: 1 1 50%;
+        padding: 1rem;
+    }
+
+    .about-us {
+        width: 100%;
+        padding-top: 0;
+    }
+
+    .about-main h2 { 
+        font-size: 2.3rem;
+        text-transform: uppercase;
+        background-image: linear-gradient(to top, var(--primary) 0%, var(--secondary) 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
+    }
+
+    #about-us-img {
         height: 100%;
         width: 100%;
-        object-fit: cover;
+        min-width: 20rem;
+        max-width: 30rem;
+        padding-top: 4rem;
     }
-    .dog-card .dc-picture1 {
-        width: 24.875em;
-        height: 24.5625em;
-        top: 0;
-        left: 0;
+
+/**------------------------------*/
+/**          Contact Us          */
+/**------------------------------*/
+
+    .contact-section {
+        background-color: var(--dark-two);
+        color: var(--primary);
+        width: 100%;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+        padding: 6rem 4rem 2rem;
     }
-    .dog-card .dc-picture2 {
-        width: 20em;
-        height: 19.875em;
-        top: 4.6875em;
-        right: 0;
-    }
-    .dog-card .dc-picture3 {
-        width: 20.3125em;
-        height: 20.125em;
-        bottom: 0;
-        left: 4.4375em;
-    }
-    .dog-card .dc-picture4 {
-        width: 16.5em;
-        height: 16.375em;
-        bottom: 3.75em;
-        right: 3.5625em;
-    }
-   
-}
-/* Desktop - 1024px */
-@media only screen and (min-width: 64rem) {
-    .dog-card .dc-container {
-        max-width: 80rem;
-        flex-direction: row;
-        align-items: center;
+
+    .contact-section h2 {
+        background-image: linear-gradient(to top, var(--primary) 0%, var(--secondary) 100%);
+        background-size: 100%;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        -moz-text-fill-color: transparent;
     }
     
-    .dog-card .dc-image-group {
-        /* reset the scale */
-        font-size: min(1.1vw, 1em);
-        /* prevent flexbox from squishing it */
-        flex: none;
+    .contact-intro > * + * {
+        margin-top: 1rem;
     }
     
-    .mom-card .dc-container {
-        flex-direction: row-reverse;
+    .contact-title {
+        font-size: 1.875rem;
+        line-height: 2.25rem;
+        font-weight: 700;
     }
-   
-}
-
-/*-- -------------------------- -->
-<---        Puppies Page        -->
-<--- -------------------------- -*/
-
+    
+    .contact-description {
+        color: gray;
+    }
+    
+    .form-group-container {
+        display: grid;
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+    
+    .form-group {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .form-label {
+        margin-bottom: 0.5rem;
+        color: var(--primary);
+    }
+    
+    .form-input,
+    .form-textarea {
+        padding: 0.5rem;
+        border: 1px solid var(--neutral);
+        display: flex;
+        height: 2.5rem;
+        width: 100%;
+        border-radius: 0.5rem;
+        font-size: 0.875rem;
+        line-height: 1.25rem;
+    }
+    
+    .form-input::placeholder,
+    .form-textarea:focus-visible {
+        color: gray;
+    }
+    
+    .form-input:focus-visible,
+    .form-textarea:focus-visible {
+        outline: 2px solid var(--accent-one);
+        outline-offset: 2px;
+    }
+    
+    .form-textarea {
+        min-height: 120px;
+    }
+    
+    .form-submit {
+        border: none;
+        width: 100%;
+        margin-top: 1.2rem;
+        background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
+        color: var(--dark-two);
+        font-size: 1rem;
+        font-weight: 500;
+        padding: 13px 5px;
+        border-radius: 3rem;
+    }
