@@ -134,6 +134,8 @@ nav a:hover {
     cursor: pointer;
 }
 
+
+
 .nav-toggle-label span,
 .nav-toggle-label span::before,
 .nav-toggle-label span::after {
@@ -278,7 +280,7 @@ nav a:hover {
 
 .footer-links-items a:hover {
     color: var(--secondary);
-    transition: 0.3s ease-out;
+    transition: 0.5s ease-out;
 }
 
 /* Social Icons */
@@ -286,7 +288,7 @@ nav a:hover {
 .social-icon-link {
     font-size: 2rem;
     color: var(--primary);
-    transition: 0.3s ease-in;
+    transition: 0.5s ease-in;
     padding: 1.5rem;
 }
 
@@ -296,14 +298,14 @@ nav a:hover {
 
 .social-icon-link:hover {
     color: var(--secondary);
-    transition: 0.3s ease-in;
+    transition: 0.5s ease-in;
 }
 
 #footer-logo {
     color: var(--primary);
     font-family: var(--font-h);
     font-size: 2rem;
-    transition: 0.3s ease-in;
+    transition: 0.5s ease-in;
 }
 
 #footer-logo i {
@@ -312,7 +314,7 @@ nav a:hover {
 
 #footer-logo:hover {
     color: var(--secondary);
-    transition: 0.3s ease-in;
+    transition: 0.5s ease-in;
 }
 
 /**------------------------------*/
@@ -337,11 +339,10 @@ nav a:hover {
     padding-bottom: 1rem;
 }
 
-.main h1 {
+.main-content h1 {
     font-size: 3.25rem;
     font-weight: 500;
     text-transform: uppercase;
-    background-image: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 33%, var(--primary) 66%, var(--secondary));
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -364,7 +365,7 @@ nav a:hover {
     margin-top: 2rem;
     cursor: pointer;
     position: relative;
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
 }
 
 .main-btn a {
@@ -378,7 +379,7 @@ nav a:hover {
 
 .main-btn:hover {
     box-shadow: 0 0 5px 1px var(--primary);
-    transition: 0.3s ease-in;
+    transition: 0.5s ease-in;
 }
 
 .main-img-container {
@@ -510,7 +511,7 @@ nav a:hover {
     background: var(--dark-two);
     border-radius: .25rem;
     box-shadow: .25rem .25rem .5rem .25rem var(--black);
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
     /* filter: grayscale(); */
 }
 
@@ -522,7 +523,7 @@ nav a:hover {
 .media-item:hover {
     box-shadow: .25rem .25rem 1.75rem .25rem var(--black);
     transform: scale(1.05);
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
     /* filter: none; */
 }
 
@@ -598,7 +599,7 @@ nav a:hover {
     background: var(--dark-two);
     border-radius: .25rem;
     box-shadow: .25rem .25rem .5rem .25rem var(--black);
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
     height: 100%;
 }
 
@@ -609,7 +610,7 @@ nav a:hover {
 .review-card:hover {
     box-shadow: .25rem .25rem 1.75rem .25rem var(--black);
     transform: scale(1.05);
-    transition: 0.3s ease-in-out;
+    transition: 0.5s ease-in-out;
     /* filter: none; */
 }
 
@@ -761,7 +762,7 @@ blockquote:after {
       border: 1px solid var(--primary);
       display: block;
       position: relative;
-      transition: background-color 0.3s, color 0.3s;
+      transition: background-color 0.5s, color 0.5s;
       cursor: pointer;
     }
     #faq-1741 .cs-button:hover {
@@ -809,7 +810,7 @@ blockquote:after {
       overflow: hidden;
       color: var(--neutral);
       opacity: 0;
-      transition: opacity 0.3s, padding-bottom 0.3s;
+      transition: opacity 0.5s, padding-bottom 0.5s;
     }
 
     .faq-btn {
@@ -844,119 +845,120 @@ blockquote:after {
     }
 
   }
-/* Services section CSS */
 
-.services {
-    color: #E8E9F3;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
+/**------------------------------*/
+/**       Services Section       */
+/**------------------------------*/
 
-.services-title {
-    background-color: var(--black);
-    width: 100%;
-    text-align: center;
-    padding-bottom: 2rem;
-}
-
-.services-title h1 {
-    font-weight: 400;
-}
-
-.services-container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 100%;
-}
-
-.services-card {
-    margin: 3rem;
-    height: 24rem;
-    width: 15rem;
-    border-radius: 2rem;
-    background-image: linear-gradient(
-        to bottom, rgba(0,0,0,0) 0%, 
-        rgb(0, 0, 0, .9) 100%), 
-        url('./images/Cribz-awards.jpg');
-    background-size: cover;
-    position: relative;
-    color: var(--neutral);
-    transition: 0.3s ease-in;
-    box-shadow: .25rem .25rem 1.25rem #bfbfbf;
-}
-
-.services-card::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    border-radius: 2rem;
-    left: 0;
-    top: 0;
-    position: absolute;
-    box-shadow: .25rem .25rem .75rem .5rem #000;
-    z-index: 1;
-}
-
-
-.services-card:nth-child(2) {
-    background-image: linear-gradient(
-        to bottom, rgba(0,0,0,0) 0%, 
-        rgba(0, 0, 0, 0.5) 100%), 
-        url('./images/Cribz-puppy.jpg');
-}
-
-.card-text {
-   position: absolute;
-   bottom: 5em;
-   left: 1em;
-}
-
-.services-card button {
-    color: var(--dark);
-    padding: .5rem 1rem;
-    border: none;
-    outline: none;
-    border-radius: 100rem;
-    background: var(--primary);
-    position: absolute;
-    bottom: 2em;
-    left: 1em;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s;
-    z-index: 99;
-}
-
-.services-card button:hover {
-    background: transparent;
-    border: 1px solid var(--primary);
-    color: var(--primary);
-    transition: all 0.3s;
-}
-
-.services-card:hover {
-    transform: scale(1.05);
-    transition: 0.3s ease-in;
-}
-
-.services-card a {
-    color: var(--dark);
-}
-
-.services-card a:hover {
-    color: var(--primary);
-}
-
-/* Responsiveness for Services */
-
-@media screen and (min-width: 768px) {
-    .services-card {
-        width: 22rem;
-        height: 35rem;
+    .services {
+        color: #E8E9F3;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-}
+
+    .services-title {
+        background-color: var(--black);
+        width: 100%;
+        text-align: center;
+        padding-bottom: 2rem;
+    }
+
+    .services-title h1 {
+        font-weight: 400;
+    }
+
+    .services-container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+
+    .services-card {
+        margin: 3rem;
+        height: 24rem;
+        width: 15rem;
+        border-radius: 2rem;
+        background-image: linear-gradient(
+            to bottom, rgba(0,0,0,0) 0%, 
+            rgb(0, 0, 0, .9) 100%), 
+            url('./images/Cribz-awards.jpg');
+        background-size: cover;
+        position: relative;
+        color: var(--neutral);
+        transition: 0.5s ease-in;
+        box-shadow: .25rem .25rem 1.25rem #bfbfbf;
+    }
+
+    .services-card::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        border-radius: 2rem;
+        left: 0;
+        top: 0;
+        position: absolute;
+        box-shadow: .25rem .25rem .75rem .5rem #000;
+        z-index: 1;
+    }
+
+
+    .services-card:nth-child(2) {
+        background-image: linear-gradient(
+            to bottom, rgba(0,0,0,0) 0%, 
+            rgba(0, 0, 0, 0.5) 100%), 
+            url('./images/Cribz-puppy.jpg');
+    }
+
+    .card-text {
+    position: absolute;
+    bottom: 5em;
+    left: 1em;
+    }
+
+    .services-card button {
+        color: var(--dark);
+        padding: .5rem 1rem;
+        border: none;
+        outline: none;
+        border-radius: 100rem;
+        background: var(--primary);
+        position: absolute;
+        bottom: 2em;
+        left: 1em;
+        font-size: 1rem;
+        cursor: pointer;
+        transition: all 0.5s;
+        z-index: 99;
+    }
+
+    .services-card button:hover {
+        background: transparent;
+        border: 1px solid var(--primary);
+        color: var(--primary);
+        transition: all 0.5s;
+    }
+
+    .services-card:hover {
+        transform: scale(1.05);
+        transition: 0.5s ease-in;
+    }
+
+    .services-card a {
+        color: var(--dark);
+    }
+
+    .services-card a:hover {
+        color: var(--primary);
+    }
+
+    @media screen and (min-width: 768px) {
+        .services-card {
+            width: 22rem;
+            height: 35rem;
+        }
+    }
 
 /**------------------------------*/
 /**           Puppies            */
@@ -965,7 +967,13 @@ blockquote:after {
     .puppies {
         display: grid;
         grid-template-columns: 1fr;
-        gap: 1rem;
+        gap: 2rem;
+    }
+
+    .page-title {
+        text-align: center;
+        font-size: 3.25rem;
+        font-weight: 300;
     }
 
     .puppies-img-container {
@@ -981,10 +989,23 @@ blockquote:after {
         padding-inline: 2rem;
     }
 
+    .upcoming-text, .past-text {
+        padding-inline: 1rem;
+    }
+
+    .subscribe {
+        padding: 2rem;
+    }
+
+    .subscribe-text {
+        padding-block: 1rem;
+    }
+
     @media only screen and (min-width: 48rem) {
         .puppies {
             grid-template-columns: 1fr 1fr;
             grid-template-areas: 
+                "p-title p-title"
                 "img title"
                 "img text";
         }
@@ -1001,6 +1022,10 @@ blockquote:after {
         .puppies-text {
             grid-area: text;
             align-self: self-start;
+        }
+
+        .page-title {
+            grid-area: p-title;
         }
     }
 
@@ -1031,7 +1056,7 @@ blockquote:after {
 
     .dogs-img-container {
         width: 100%;
-        min-width: 17.5rem;
+        min-width: 25rem;
         max-width: 50rem;
         margin-left: -.75rem;
         display: flex;
@@ -1052,9 +1077,13 @@ blockquote:after {
         padding-left: 1.25rem;
     }
 
+    .dogs-main-title {
+        padding: 0 2rem 2rem;
+    }
+
     .dogs-main h1 {
         font-size: 3rem;
-        font-weight: 600;
+        font-weight: 400;
         text-transform: uppercase;
         background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
         background-size: 100%;
@@ -1085,17 +1114,17 @@ blockquote:after {
     .dogs-main a {
         color: var(--primary);
         text-decoration: underline;
-        transition: 0.3s ease-in;
+        transition: 0.5s ease-in;
         font-weight: 400;
     }
 
     .dogs-main a:hover {
         color: var(--secondary);
-        transition: 0.3s ease-in;
+        transition: 0.5s ease-in;
     }
 
-    .dogs-main-title {
-        padding-bottom: 2rem;
+    .studs-text, .females-text {
+        padding: 0 1rem 2rem;
     }
     /* Dog Card CSS */
 
@@ -1185,12 +1214,12 @@ blockquote:after {
             z-index: 1;
             /* prevents padding from adding to the width */
             box-sizing: border-box;
-            transition: 0.3s ease-in-out;
+            transition: 0.5s ease-in-out;
         }
 
         .dc-button-solid:hover {
             box-shadow: 0 0 5px 1px var(--primary);
-            transition: 0.3s ease-in-out;
+            transition: 0.5s ease-in-out;
         }
     
         .dog-card .dc-image-group {
@@ -1325,20 +1354,19 @@ blockquote:after {
         max-width: 800px;
         margin-left: auto;
         margin-right: auto;
-        padding: 6rem 4rem 2rem;
+        padding: 6rem 3rem;
     }
 
     .contact-section h2 {
+        font-size: 3rem;
+        font-weight: 300;
         background-image: linear-gradient(to top, var(--primary) 0%, var(--secondary) 100%);
         background-size: 100%;
         -webkit-background-clip: text;
         -moz-background-clip: text;
         -webkit-text-fill-color: transparent;
         -moz-text-fill-color: transparent;
-    }
-    
-    .contact-intro > * + * {
-        margin-top: 1rem;
+        padding-block: 1rem;
     }
     
     .contact-title {
@@ -1348,13 +1376,13 @@ blockquote:after {
     }
     
     .contact-description {
-        color: gray;
+        color: var(--neutral);
     }
     
     .form-group-container {
         display: grid;
         gap: 1rem;
-        margin-top: 2rem;
+        margin-top: 1rem;
     }
     
     .form-group {
