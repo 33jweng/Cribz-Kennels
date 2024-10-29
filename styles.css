@@ -24,7 +24,7 @@ body {
 
 h1, h2, h3{
     font-family: var(--font-h);
-    background-image: linear-gradient(to top, var(--secondary) 0%, var(--primary) 100%);
+    background-image: linear-gradient(to top, var(--primary) 0%, var(--secondary) 100%);
     background-size: 100%;
     -webkit-background-clip: text;
     -moz-background-clip: text;
@@ -39,6 +39,11 @@ p {
 
 a {
     text-decoration: none;
+}
+
+hr {
+    color: var(--neutral);
+    margin-block: 1rem;
 }
 /* Navigation CSS */
 
@@ -321,13 +326,17 @@ nav a:hover {
 /**            Main              */
 /**------------------------------*/
 
+.landing-page-body {
+    background-color: var(--black);
+}
+
 .main {
     background-color: var(--dark-two);
     display: flex;
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 6rem 2rem 2rem;
+    padding: 6rem 4rem 3rem;
 }
 
 .main > * {
@@ -402,7 +411,7 @@ nav a:hover {
 
 .breeders {
     background-color: var(--black);
-    padding-bottom: 1rem;
+    padding: 2rem 3rem;
     display: flex;
     flex-wrap: wrap-reverse;
 }
@@ -432,7 +441,7 @@ nav a:hover {
 }
 
 .breeders-text {
-    padding-inline: 2rem;
+    padding: 0 2rem 2rem;
     line-height: 1.5rem;
 }
 
@@ -441,12 +450,18 @@ nav a:hover {
     font-weight: 600;
 }
 
+.main-divider {
+    margin: 3rem 4rem 2rem;
+}
+
 /* Intro Section CSS */
 
 .intro {
     background-color: var(--black);
     display: flex;
     flex-wrap: wrap;
+    padding-inline: 3rem;
+    padding-bottom: 3rem;
 }
 
 .intro > * {
@@ -531,7 +546,7 @@ nav a:hover {
 
 .why-us-text {
     background-color: var(--black);
-    padding: 2rem;
+    padding: 4rem;
     font-size: 1.5rem;
 }
 .why-us-text h2 {
@@ -542,7 +557,7 @@ nav a:hover {
     -webkit-text-fill-color: transparent;
     -moz-text-fill-color: transparent;
     font-size: 2.5rem;
-    font-weight: 500;
+    font-weight: 400;
 }
 
 .why-us-text p {
@@ -879,11 +894,10 @@ blockquote:after {
         margin: 3rem;
         height: 24rem;
         width: 15rem;
-        border-radius: 2rem;
         background-image: linear-gradient(
             to bottom, rgba(0,0,0,0) 0%, 
             rgb(0, 0, 0, .9) 100%), 
-            url('./images/Cribz-awards.jpg');
+            url('./images/dogs/Cribz-awards.jpg');
         background-size: cover;
         position: relative;
         color: var(--neutral);
@@ -895,7 +909,6 @@ blockquote:after {
         content: "";
         width: 100%;
         height: 100%;
-        border-radius: 2rem;
         left: 0;
         top: 0;
         position: absolute;
@@ -908,7 +921,7 @@ blockquote:after {
         background-image: linear-gradient(
             to bottom, rgba(0,0,0,0) 0%, 
             rgba(0, 0, 0, 0.5) 100%), 
-            url('./images/Cribz-puppy.jpg');
+            url('./images/puppies/Cribz-puppy.jpg');
     }
 
     .card-text {
@@ -922,7 +935,7 @@ blockquote:after {
         padding: .5rem 1rem;
         border: none;
         outline: none;
-        border-radius: 100rem;
+        border-radius: .25rem;
         background: var(--primary);
         position: absolute;
         bottom: 2em;
@@ -990,11 +1003,13 @@ blockquote:after {
     }
 
     .upcoming-text, .past-text {
-        padding-inline: 1rem;
+        padding: 0 2rem 2rem;
     }
 
     .subscribe {
-        padding: 2rem;
+        padding: 3rem;
+        max-width: 48rem;
+        justify-self: center;
     }
 
     .subscribe-text {
@@ -1270,7 +1285,7 @@ blockquote:after {
         }
     
     }
-    /* Desktop - 1024px */
+
     @media only screen and (min-width: 64rem) {
         .dog-card .dc-container {
             max-width: 80rem;
@@ -1297,10 +1312,60 @@ blockquote:after {
 
     .bullies {
         display: grid;
-        gap: 1rem;
-        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+        gap: 2rem;
     }
 
+    .wide-img {
+        justify-self: center;
+    }
+
+    .tall-img {
+        justify-self: center;
+    }
+
+    @media only screen and (min-width: 48rem) {
+        .bullies {
+            grid-template-columns: auto;
+            grid-template-areas: 
+                "p-title p-title"
+                "wide-img wide-img"
+                "wide-text wide-text"
+                "divider divider"
+                "tall-img tall-text";
+            gap: 3rem;
+        }
+
+        .wide-img {
+            grid-area: wide-img;
+        }
+
+        .bullies-text {
+            grid-area: wide-text;
+        }
+
+        .bully-divider {
+            grid-area: divider;
+        }
+
+        .tall-img {
+            grid-area: tall-img;
+        }
+
+        .xl-bullies-text {
+            grid-area: tall-text;
+        }
+    }
+
+    @media only screen and (min-width: 64rem) {
+        .bullies {
+            grid-template-areas: 
+                "p-title p-title"
+                "wide-text wide-img"
+                "divider divider"
+                "tall-img tall-text";
+            padding: 6rem 5rem;
+        }
+    }
 
 /**------------------------------*/
 /**           About Us           */
@@ -1432,4 +1497,29 @@ blockquote:after {
         font-weight: 500;
         padding: 13px 5px;
         border-radius: 3rem;
+    }
+
+/**------------------------------*/
+/**          Families            */
+/**------------------------------*/
+
+    .families-title h1{
+        font-size: 3rem;
+        font-weight: 3;
+    }
+
+    .families-title p {
+        font-size: 1rem;
+        padding-left: .25rem;
+    }
+
+    .families-gallery {
+        display: flex;
+        width: 100%;
+        
+    }
+
+    .column {
+        display: flex;
+        flex-direction: column;
     }
