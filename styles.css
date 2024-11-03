@@ -35,6 +35,7 @@ h1, h2, h3{
 p {
     color: var(--neutral);
     font-family: var(--font-p);
+    text-align: justify;
 }
 
 a {
@@ -707,9 +708,9 @@ blockquote:after {
 }
 
 
-/*-- -------------------------- -->
-<---            FAQ             -->
-<--- -------------------------- -*/
+/**------------------------------*/
+/**             FAQ              */
+/**------------------------------*/
 
 /* Mobile - 320px */
 
@@ -977,10 +978,15 @@ blockquote:after {
 /**           Puppies            */
 /**------------------------------*/
 
+    .puppies-body {
+        background-color: var(--black);
+    }
+
     .puppies {
         display: grid;
         grid-template-columns: 1fr;
         gap: 2rem;
+        background-color: var(--black);
     }
 
     .page-title {
@@ -996,6 +1002,11 @@ blockquote:after {
         display: flex;
         flex-direction: column;
         align-items: center;
+    }
+
+
+    .puppies-divider {
+        margin: 0 3rem 1rem;
     }
 
     .upcoming-litters {
@@ -1136,6 +1147,10 @@ blockquote:after {
     .dogs-main a:hover {
         color: var(--secondary);
         transition: 0.5s ease-in;
+    }
+
+    .stud-divider {
+        margin-bottom: 2rem;
     }
 
     .studs-text, .females-text {
@@ -1316,12 +1331,19 @@ blockquote:after {
     }
 
     .wide-img {
+        max-width: 40rem;
         justify-self: center;
     }
 
     .tall-img {
         justify-self: center;
     }
+
+    .left-shadow {
+        box-shadow: -1rem 1rem var(--primary);
+        margin-right: -.75rem;
+    }
+
 
     @media only screen and (min-width: 48rem) {
         .bullies {
@@ -1372,40 +1394,80 @@ blockquote:after {
 /**------------------------------*/
 
     .about-main {
-        padding: 6rem 2rem 2rem;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-wrap: wrap;
+        padding: 6rem 5rem 2rem;
+        display: grid;
+        grid-template-areas:
+            "title title"
+            "divider divider"
+            "process about"
+            "l-divider l-divider";
+        gap: 3rem;
     }
 
-    .about-main > * {
-        flex: 1 1 50%;
-        padding: 1rem;
+    .about-title {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        grid-area: title;
+    }
+
+    .about-divider {
+        grid-area: divider;
     }
 
     .about-us {
-        width: 100%;
-        padding-top: 0;
+        display: flex;
+        flex-direction: column;
+        grid-area: about;
+        gap: 2rem;
+    }
+
+    .about-us img {
+        margin-right: 1rem;
+        align-self: center;
+    }
+
+    .our-process {
+        display: flex;
+        flex-direction: column;
+        grid-area: process;
+        gap: 2rem;
+    }
+
+    .our-process img {
+        margin-left: 1rem;
+        align-self: center;
     }
 
     .about-main h2 { 
-        font-size: 2.3rem;
-        text-transform: uppercase;
-        background-image: linear-gradient(to top, var(--primary) 0%, var(--secondary) 100%);
-        background-size: 100%;
-        -webkit-background-clip: text;
-        -moz-background-clip: text;
-        -webkit-text-fill-color: transparent;
-        -moz-text-fill-color: transparent;
+        font-size: 3rem;
+        font-weight: 400;
+        background-image: linear-gradient(to bottom, var(--primary) 0%, var(--secondary) 100%);
     }
 
-    #about-us-img {
-        height: 100%;
-        width: 100%;
-        min-width: 20rem;
+    .about-us-img {
         max-width: 30rem;
-        padding-top: 4rem;
+        box-shadow: 1rem 1rem var(--primary);
+    }
+
+    .lower-divider {
+        grid-area: l-divider;
+    }
+
+    @media only screen and (max-width: 48rem) {
+        .about-main {
+            grid-template-areas: 
+            "title"
+            "divider"
+            "about"
+            "process"
+            "l-divider";
+        }
+
+        .our-process {
+            flex-direction: column-reverse;
+        }
     }
 
 /**------------------------------*/
