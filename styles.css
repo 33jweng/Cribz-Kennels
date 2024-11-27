@@ -970,7 +970,7 @@ blockquote:after {
     left: 1em;
     }
 
-    .services-card button {
+    .services-card a {
         color: var(--dark);
         padding: .5rem 1rem;
         border: none;
@@ -986,7 +986,7 @@ blockquote:after {
         z-index: 99;
     }
 
-    .services-card button:hover {
+    .services-card a:hover {
         background: transparent;
         border: 1px solid var(--primary);
         color: var(--primary);
@@ -996,14 +996,6 @@ blockquote:after {
     .services-card:hover {
         transform: scale(1.05);
         transition: 0.5s ease-in;
-    }
-
-    .services-card a {
-        color: var(--dark);
-    }
-
-    .services-card a:hover {
-        color: var(--primary);
     }
 
     @media screen and (min-width: 768px) {
