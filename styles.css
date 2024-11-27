@@ -1058,6 +1058,10 @@ blockquote:after {
         padding-block: 1rem;
     }
 
+    .subscribe-form {
+        justify-self: center;
+    }
+
     @media only screen and (min-width: 48rem) {
         .puppies {
             grid-template-columns: 1fr 1fr;
