@@ -609,7 +609,6 @@ nav a:hover {
 @media screen and (max-width: 30rem) {
     
     .breeders-text, .intro-text, .why-us-text {
-        border: 1px solid red;
         padding-inline: 2rem;
     }
 
