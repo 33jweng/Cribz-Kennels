@@ -937,6 +937,9 @@ blockquote:after {
             to bottom, rgba(0,0,0,0) 0%, 
             rgb(0, 0, 0, .9) 100%), 
             url('./images/dogs/Cribz-awards.jpg');
+        @supports (background-image: url('./images/dogs/Cribz-awards.webp')) {
+            background-image: url('./images/dogs/Cribz-awards.webp');
+            }
         background-size: cover;
         position: relative;
         color: var(--neutral);
@@ -961,6 +964,9 @@ blockquote:after {
             to bottom, rgba(0,0,0,0) 0%, 
             rgba(0, 0, 0, 0.5) 100%), 
             url('./images/puppies/Cribz-puppy.jpg');
+        @supports (background-image: url('./images/puppies/Cribz-puppy.webp')) {
+            background-image: url('./images/puppies/Cribz-puppy.webp');
+            }
     }
 
     .card-text {
